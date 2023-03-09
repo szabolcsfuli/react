@@ -4,7 +4,7 @@ const UserList = (props) => {
   return (
     <Fragment>
       {props.userList.map((item, index) => (
-        <div key={index}>{item.userName} ({item.age})</div>
+        <div key={index}>{item.userName} ({item.age}) *</div>
       ))}
     </Fragment>
   );
