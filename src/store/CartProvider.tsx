@@ -1,6 +1,5 @@
 import { useReducer } from "react";
 import CartContext from "./CartContext";
-import { View } from 'react-native'
 
 const cartReducer = (state: any, action: any) => {
     let index = state.items.findIndex((item: any) => {
@@ -48,12 +47,6 @@ const CartProvider = (props: any) => {
         totalCount: 0,
         totalAmount: 0,
         totalItems: 0,
-        addItem: (item: any) => {
-            dispatch({
-                type: 'ADD',
-                item: item,
-            })
-        },
     }
     const [reducer, dispatch] = useReducer(cartReducer, defaultReducerState);
 
